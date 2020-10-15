@@ -52,7 +52,7 @@ public class JogoResource {
 	public ResponseEntity<Jogo> insertJogo(@RequestBody JogoInDTO jogoDTO) {
 		
 		Jogo jogo = service.insertJogo(jogoDTO);
-		//URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(jogo.getId()).toUri();
+		
 		return ResponseEntity.ok(jogo);
 		
 	}
