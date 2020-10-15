@@ -45,7 +45,7 @@ public class JogoService {
 		Ranking rank = new Ranking(jogo);
 
 		if (record != null && !record.isEmpty()) {
-			if (record.get(0).compareTo(rank) > 0) {
+			if (rank.compareTo(record.get(0)) < 0) {
 				rank.setId(record.get(0).getId());
 				return repoRank.save(rank);
 			}
