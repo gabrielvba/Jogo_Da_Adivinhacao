@@ -70,9 +70,11 @@ public class Ranking implements Serializable, Comparable<Ranking> {
 	@Override
 	public int compareTo(Ranking o) {
 	    int res=0;
-	    res = this.getJogo().getTentativas() < o.getJogo().getTentativas() ? 1 : -1;
-	    if(res==0)
-	        res = this.getJogo().getDuracao() < o.getJogo().getDuracao() ? 1 : -1;
+	    if(this.getJogo().getTentativas() == o.getJogo().getTentativas()) {
+	    	res = this.getJogo().getDuracao() > o.getJogo().getDuracao() ? 1 : -1;
+	    }else {
+	    	 res = this.getJogo().getTentativas() > o.getJogo().getTentativas() ? 1 : -1;
+	    }     
 	    return res;
 	}
 

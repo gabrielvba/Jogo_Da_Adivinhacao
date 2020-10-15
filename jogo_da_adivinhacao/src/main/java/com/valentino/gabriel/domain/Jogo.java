@@ -92,5 +92,12 @@ public class Jogo implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	@Override
+	public String toString() {
+		return "Jogo [id=" + id + ", nome=" + nome + ", tentativas=" + tentativas + ", partidas=" + partidas
+				+ ", duracao=" + duracao + "]";
+	}
+	
 	
 }

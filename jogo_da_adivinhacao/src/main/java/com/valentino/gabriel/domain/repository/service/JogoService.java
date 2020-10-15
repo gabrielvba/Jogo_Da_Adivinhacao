@@ -43,7 +43,6 @@ public class JogoService {
 	private Ranking updateRank(Jogo jogo) {
 		List<Ranking> record = repoRank.getRecordName(jogo.getNome());
 		Ranking rank = new Ranking(jogo);
-
 		if (record != null && !record.isEmpty()) {
 			if (rank.compareTo(record.get(0)) < 0) {
 				rank.setId(record.get(0).getId());
